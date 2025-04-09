@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+        header {
+		    width: 100%;
+		    height: 60px;
+		    position: fixed; /* 화면 상단에 고정 */
+		    top: 0;
+		    left: 0;
+		    display: flex;
+		    justify-content: space-between;
+	    	align-items: center;
+		    background-color: #ebecf0; /* 헤더 배경색을 body와 동일하게 설정 */
+		    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		    z-index: 10; /* 다른 요소들보다 위에 오도록 설정 */
+		}
+
+        
+        body {
+           background-color: #ebecf0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            
+        }
+
+        /* 메인 컨텐츠 */
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+}
+
+
+        /* 냉장고 이미지 */
+        .fridge {
+    width: 400px;
+    height: 600px;
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    position: relative; /* 자식 요소의 절대 위치를 위한 설정 */
+}
+
+        /* 냉동고와 냉장고를 나누는 선 */
+        .fridge::before {
+            content: "";
+            position: absolute;
+            top: 35%;
+            left: 0;
+            width: 100%;
+            height: 3px; /* 선의 두께 */
+            background-color: black; /* 선의 색상 */
+        }
+        
+        .ingredients-container {
+   position: absolute; /* 절대 위치 */
+   top: 50%; /* 냉장고 안에서 중앙 정렬 */
+   left: 50%;
+   transform: translate(-50%, -50%); /* 정확한 중앙 배치 */
+   width: 80%; /* 박스 너비 */
+   text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.ingredients-container ul {
+   list-style-type: none;
+   padding-left: 0;
+}
+
+.ingredients-container li {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 5px;
+}
+
+.ingredients-container button {
+   margin-left: 10px;
+}
+
+       
+       /* 검색창 */
+       .search-bar{
+           display:flex; 
+           justify-content:center; 
+           margin-top :20px;
+           margin-left: 30px;
+       }
+       
+       input[type="text"]{
+          	background: #eee;
+		    padding: 16px;
+		    margin: 8px 0;
+		    width: 85%;
+		    border: 0;
+		    outline: none;
+		    border-radius: 20px;
+		   /*  box-shadow: inset 7px 2px 10px #babebc, inset -5px -5px 12px #fff; */
+       }
+       button[type="submit"] {
+          display:flex;
+          background-color:#000000; 
+          color:white; 
+          text-decoration:none; 
+          border-radius:5px;
+          text-align:center; 
+         /*  box-shadow:0 2px 4px rgba(0,0,0,0.1);  */
+    }
+    button[type="submit"]:hover {
+   /*      box-shadow: inset 2px 2px 5px #484d4a; */
+    }

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ebecf0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 30px;
+            color: #333;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #000;  /* 버튼 색을 검정으로 변경 */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background-color: #333;  /* 검정색 버튼에 호버 시 약간 어두운 색으로 변경 */
+        }

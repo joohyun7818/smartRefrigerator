@@ -1,0 +1,142 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
+        * {
+            box-sizing: border-box;
+        }
+        header {
+		    width: 100%;
+		    height: 60px;
+		    position: fixed; /* 화면 상단에 고정 */
+		    top: 0;
+		    left: 0;
+		    display: flex;
+		    justify-content: space-between;
+	    	align-items: center;
+		    background-color: #ebecf0; /* 헤더 배경색을 body와 동일하게 설정 */
+		    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		    z-index: 10; /* 다른 요소들보다 위에 오도록 설정 */
+		}
+        
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+		    width: 100%;
+		    min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+		    display: flex;
+		    justify-content: center;
+		    align-items: flex-start; /* 화면 상단에 맞추기 */
+		    background-color: #ebecf0; /* wrapper 배경색을 body와 동일하게 설정 */
+		    padding-top: 80px; /* 헤더 아래에 여백 추가 */
+		    overflow: auto; /* 넘칠 경우 스크롤이 생기도록 설정 */
+		    position: relative; /* 내부 요소들이 정확하게 위치하도록 설정 */
+		}
+
+        .container {
+            border-radius: 10px;
+            box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
+            position: absolute;
+            width: 768px;
+            min-height: 600px;
+            overflow: hidden;
+        }
+        form {
+            background: #ebecf0;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 50px;
+            height: 100%;
+            justify-content: center;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            flex: 0 0 30%;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input, 
+        .form-group select {
+            flex: 1;
+            background: #eee;
+            padding: 10px;
+            border: 0;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: inset 7px 2px 10px #babebc, inset -5px -5px 12px #fff;
+        }
+        .form-group input:disabled, 
+        .form-group select:disabled {
+            background: #ddd;
+            color: #888;
+        }
+        .password-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .password-container input {
+            width: 100%;
+            padding-right: 40px;
+        }
+        .password-container .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #888;
+        }
+        .wrapper button {
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 15px 45px;
+            margin: 20px auto 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+            display: block;
+        }
+        .wrapper button:active {
+            box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+        }
+        form h2 {
+            font-weight: bold;
+            text-align: center;
+            color: #000;
+            margin-bottom: 30px;
+        }
+        form h3{
+        	font-weight: bold;
+            text-align: center;
+            color: #000;
+            margin-bottom: 30px;
+        }
+        form span{
+       		display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        	color: red;
+            font-size: 12px;
+            margin-top: 5px;  /* 수정된 부분 */
+        }
+        span {
+            font-size: 12px;
+            color: #000;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;  /* 수정된 부분 */
+        }

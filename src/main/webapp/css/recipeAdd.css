@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+        header {
+		    width: 100%;
+		    height: 60px;
+		    position: fixed; /* 화면 상단에 고정 */
+		    top: 0;
+		    left: 0;
+		    display: flex;
+		    justify-content: space-between;
+	    	align-items: center;
+		    background-color: #ebecf0; /* 헤더 배경색을 body와 동일하게 설정 */
+		    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		    z-index: 10; /* 다른 요소들보다 위에 오도록 설정 */
+		}
+
+        
+        body {
+           background-color: #ebecf0;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            
+        }
+        .wrapper {
+		    width: 100%;
+		    min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+		    display: flex;
+		    justify-content: center;
+		    align-items: flex-start; /* 화면 상단에 맞추기 */
+		    background-color: #ebecf0; /* wrapper 배경색을 body와 동일하게 설정 */
+		    padding-top: 80px; /* 헤더 아래에 여백 추가 */
+		    overflow: auto; /* 넘칠 경우 스크롤이 생기도록 설정 */
+		    position: relative; /* 내부 요소들이 정확하게 위치하도록 설정 */
+		}
+        
+.content {
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
+    position: relative;
+    width: 768px;
+    max-width: 90%; /* 작은 화면에서 반응형 처리 */
+    background: #ebecf0;
+    overflow: hidden;
+    padding: 40px;
+
+    display: flex; /* 내부 요소를 중앙 정렬하기 위한 Flexbox */
+    flex-direction: column; /* 세로 방향으로 배치 */
+    align-items: center; /* 내부 요소 수평 가운데 정렬 */
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    gap: 25px;
+    width: 100%; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    background: #eee;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #babebc, inset -5px -5px 12px #fff;
+    font-size: 16px;
+    outline: none;
+}
+.form-group textarea {
+    padding: 10px;
+    background: #eee;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 10px #babebc, inset -5px -5px 12px #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus {
+    box-shadow: inset 2px 2px 5px #babebc, inset -2px -2px 5px #fff;
+}
+
+button[type="submit"] {
+    padding: 15px 20px;
+    border-radius: 20px;
+    background: #ebecf0;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+    transition: box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+   box-shadow: inset 2px 2px 5px #babebc, inset -2px -2px 5px #fff; 
+}
